@@ -1,0 +1,40 @@
+{
+  "name": "my-notes",
+  "private": true,
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "nodemon --exec electron . --ext .js,.vue,.html,.css",
+    "start": "nodemon --exec electron . --watch ./ --ext .js,.html,.css,.vue",
+    "pack": "electron-builder"
+  },
+  "dependencies": {
+    "electron-win-state": "^1.1.22",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "vite": "^4.0.0"
+  },
+  "build": {
+    "appId": "your.app.id",
+    "productName": "Notes",
+    "copyright": "Copyright © 2023 JYJY",
+    "directories": {
+      "output": "dist"
+    },
+    "nsis": {
+      "oneClick": false,
+      "language": "2052",
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
